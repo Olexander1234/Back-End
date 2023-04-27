@@ -1,172 +1,137 @@
 {
-  "movies": [
+  "students": [
     {
       "id": 1,
-      "title": "Втеча з Шоушенка",
-      "director": "Frank Darabont",
-      "genres": [
-        "Drama"
-      ],
-      "rating": 9.3
+      "name": "John Doe",
+      "age": 20,
+      "email": "john.doe@example.com",
+      "phone": "555-1234"
     },
     {
       "id": 2,
-      "title": "Хресний батько",
-      "director": "Francis Ford Coppola",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "rating": 9.2
+      "name": "Jane Smith",
+      "age": 21,
+      "email": "jane.smith@example.com",
+      "phone": "555-5678"
     },
     {
       "id": 3,
-      "title": "Темний лицар",
-      "director": "Christopher Nolan",
-      "genres": [
-        "Action",
-        "Crime",
-        "Drama"
-      ],
-      "rating": 9
+      "name": "Bob Johnson",
+      "age": 19,
+      "email": "bob.johnson@example.com",
+      "phone": "555-9012"
     },
     {
-      "id": 4,
-      "title": "Список Шиндлера",
-      "director": "Steven Spielberg",
-      "genres": [
-        "Biography",
-        "Drama",
-        "History"
-      ],
-      "rating": 8.9
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
+      "id": 4
     },
     {
-      "id": 5,
-      "title": "Володар кілець: Повернення короля",
-      "director": "Peter Jackson",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Drama"
-      ],
-      "rating": 8.9
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
+      "id": 5
     },
     {
-      "id": 6,
-      "title": "Кримінальне чтиво",
-      "director": "Quentin Tarantino",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "rating": 8.9
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
+      "id": 6
     },
     {
-      "id": 7,
-      "title": "Форрест Гамп",
-      "director": "Robert Zemeckis",
-      "genres": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
-      "rating": 8.8
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
+      "id": 8
     },
     {
-      "id": 8,
-      "title": "Початок",
-      "director": "Christopher Nolan",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Sci-Fi"
-      ],
-      "rating": 8.8
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
+      "id": 9
     },
     {
-      "id": 9,
-      "title": "Володар кілець: Братство персня",
-      "director": "Peter Jackson",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Drama"
-      ],
-      "rating": 8.8
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
+      "id": 10
     },
     {
-      "id": 10,
-      "title": "Матриця",
-      "director": "Lana Wachowski, Lilly Wachowski",
-      "genres": [
-        "Action",
-        "Sci-Fi"
-      ],
-      "rating": 8.7
-    },
-    {
-      "title": "JS",
-      "director": "Me",
-      "genres": [
-        "Drama"
-      ],
-      "rating": 100,
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
       "id": 11
     },
     {
-      "title": "хочу Сало",
-      "director": "Me",
-      "genres": [
-        "Drama"
-      ],
-      "rating": 100,
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
       "id": 12
     },
     {
-      "title": "відай  Сало",
-      "director": "Me",
-      "genres": [
-        "  Drama"
-      ],
-      "rating": 100457,
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
       "id": 13
     },
     {
-      "title": "МОЄ САЛОО",
-      "director": "Me",
-      "genres": [
-        "  Drama"
-      ],
-      "rating": 100457,
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
       "id": 14
     },
     {
-      "title": "відай  Сало",
-      "director": "Me",
-      "genres": [
-        "  Drama"
-      ],
-      "rating": 100457,
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
       "id": 15
     },
     {
-      "title": "відай  Сало",
-      "director": "Me",
-      "genres": [
-        "  Drama"
-      ],
-      "rating": 100457,
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
       "id": 16
     },
     {
-      "title": "відай  Сало",
-      "director": "Me",
-      "genres": [
-        "  Drama"
-      ],
-      "rating": 100457,
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
       "id": 17
+    },
+    {
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
+      "id": 18
+    },
+    {
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
+      "id": 19
+    },
+    {
+      "name": "Jason Drknees ",
+      "age": 43,
+      "email": "jason.doe@example.com",
+      "phone": "456-1234",
+      "id": 20
     }
   ]
 }
