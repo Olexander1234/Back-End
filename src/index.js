@@ -112,53 +112,53 @@ function getStudensById(studensId) {
 postStudens(newstudens)
 
 // PUT /students/:id - оновити інформацію про студента за ідентифікатором.
-// const update = {
+const update = {
   
-//     name: "Jason Drknees ",
-//     age: 46,
-//     email: "jason.doe@example.com",
-//     phone: "3546745",
-//     id: 4
+    name: "Jason Drknees ",
+    age: 46,
+    email: "jason.doe@example.com",
+    phone: "3546745",
+
   
-// }
-// function updateById(update, studentsId) {
-//   const options = {
-//     method: "PUT",
-//     headers: {
-//       'Content-type': 'application/json'
-//     },
-//     body: JSON.stringify(update)
-//   }
-//   fetch(`${BASE_URL}/students/${studentsId}`, options)
-//     .then(response => response.json())
-//     .then(data => console.log(data))
-// }
-// updatePathById(5, update);
+}
+function updateById(update, studentsId) {
+  const options = {
+    method: "PUT",
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify(update)
+  }
+  fetch(`${BASE_URL}/students/${studentsId}`, options)
+    .then(response => response.json())
+    .then(data => console.log(data))
+}
+updateById(update, 5);
 
 
 // // PATCH /students/:id - оновити часткову інформацію про студента за ідентифікатором.\
 
 
 
-// const updateget = {
-//   name: "Сало",
-//   age: 87,
-// }
-// function updatePathById(update, studentsId) {
-//   const options = {
-//     method: "PATCH",
-//     headers: {
-//       'Content-type': 'application/json'
-//     },
-//     body: JSON.stringify(update)
-//   }
-//   fetch(`${BASE_URL}/students/${studentsId}`, options)
-//     .then(response => response.json())
-//     .then(data => console.log(data))
-// }
+const updateget = {
+  name: "Сало",
+  age: 87,
+}
+function updatePathById(update, studentsId) {
+  const options = {
+    method: "PATCH",
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify(update)
+  }
+  fetch(`${BASE_URL}/students/${studentsId}`, options)
+    .then(response => response.json())
+    .then(data => console.log(data))
+}
 
 
-// updateById(5, updateget)
+updatePathById( updateget, 5)
 
 
 
@@ -167,16 +167,50 @@ postStudens(newstudens)
 function deletestudentsById (moviesId) {
       fetch(`${BASE_URL}/students/${moviesId}`, {method:'DELETE'})
       .then(res=>res.json())
+      .then(data => console.log(data))
     }
   
-    deletestudentsById(7)
+    deletestudentsById(3)
   
 // GET /students?age=:age - повернути всіх студентів з вказаним віком.
 
 
 function ageStudents(age) {
-  fetch(`${BASE_URL}/students/age=${age}`)
-  .then(res=>res.json())
+  return fetch(`${BASE_URL}/students?age=${age}`)
+    .then(res => res.json())
+    .then(data => console.log(data))
 }
 
 ageStudents(19)
+
+
+//GET /students?name=:name - повернути всіх студентів з вказаним ім'ям.
+
+function nameStudents(name) {
+  return fetch(`${BASE_URL}/students?name=${name}`)
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
+
+nameStudents("Jason")
+
+
+// GET /students?email=:email - повернути студента з вказаною електронною поштою.
+
+function emailStudents(email) {
+  return fetch(`${BASE_URL}/students?email=${email}`)
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
+
+emailStudents("john.doe@example.com")
+
+// GET /students?phone=:phone - повернути студента з вказаним номером телефону.
+
+function phoneStudents(phone) {
+  return fetch(`${BASE_URL}/students?phone=${phone}`)
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
+
+phoneStudents("555-1234")
