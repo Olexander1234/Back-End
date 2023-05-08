@@ -71,16 +71,17 @@ const BASE_URL = 'http://localhost:3000'
  const res = await fetch(`${BASE_URL}/students`)
  const student =  await res.json()
  const articles = await student.articles
- return student
+ return console.log(student);
  }
  getReturnStudens()
 
 // GET /students/:id - повернути студента за ідентифікатором.
 
-function getStudensById(studensId) {
-  fetch(`${BASE_URL}/students/${studensId}`)
-  .then(res=>res.json())
-  .then(data=> console.log(data))
+async function getStudensById(studensId) {
+  const res = await fetch(`${BASE_URL}/students/${studensId}`)
+  const student =  await res.json()
+ const articles = await student.articles
+ return console.log(student);
      }
 
      getStudensById(2)
@@ -96,7 +97,7 @@ function getStudensById(studensId) {
   phone: "456-1234"
  }
 
- function postStudens (newstudens) {
+ async function postStudens (newstudens) {
       const options ={
           method: "POST",
          headers: {
@@ -105,9 +106,10 @@ function getStudensById(studensId) {
         },
          body: JSON.stringify(newstudens)
        }
-    return fetch(`${BASE_URL}/students`, options)
- .then(response => response.json())
- .then(data=> console.log(data))
+       const res = await fetch(`${BASE_URL}/students`, options)
+       const student =  await res.json()
+       const articles = await student.articles
+       return console.log(student);
 }
 
 postStudens(newstudens)
@@ -122,7 +124,7 @@ const update = {
 
   
 }
-function updateById(update, studentsId) {
+async function updateById(update, studentsId) {
   const options = {
     method: "PUT",
     headers: {
@@ -130,9 +132,11 @@ function updateById(update, studentsId) {
     },
     body: JSON.stringify(update)
   }
-  fetch(`${BASE_URL}/students/${studentsId}`, options)
-    .then(response => response.json())
-    .then(data => console.log(data))
+  
+  const res = await fetch(`${BASE_URL}/students/${studentsId}`, options)
+  const student =  await res.json()
+  const articles = await student.articles
+  return console.log(student);
 }
 updateById(update, 5);
 
@@ -145,7 +149,7 @@ const updateget = {
   name: "Сало",
   age: 87,
 }
-function updatePathById(update, studentsId) {
+async function updatePathById(update, studentsId) {
   const options = {
     method: "PATCH",
     headers: {
@@ -153,9 +157,10 @@ function updatePathById(update, studentsId) {
     },
     body: JSON.stringify(update)
   }
-  fetch(`${BASE_URL}/students/${studentsId}`, options)
-    .then(response => response.json())
-    .then(data => console.log(data))
+  const res = await fetch(`${BASE_URL}/students/${studentsId}`, options)
+  const student =  await res.json()
+  const articles = await student.articles
+  return console.log(student);
 }
 
 
@@ -165,10 +170,11 @@ updatePathById( updateget, 5)
 
 // DELETE /students/:id - видалити студента за ідентифікатором.
 
-function deletestudentsById (moviesId) {
-      fetch(`${BASE_URL}/students/${moviesId}`, {method:'DELETE'})
-      .then(res=>res.json())
-      .then(data => console.log(data))
+async function deletestudentsById (moviesId) {
+  const res = await fetch(`${BASE_URL}/students/${moviesId}`, {method:'DELETE'})
+  const student =  await res.json()
+  const articles = await student.articles
+  return console.log(student);
     }
   
     deletestudentsById(3)
@@ -176,10 +182,11 @@ function deletestudentsById (moviesId) {
 // GET /students?age=:age - повернути всіх студентів з вказаним віком.
 
 
-function ageStudents(age) {
-  return fetch(`${BASE_URL}/students?age=${age}`)
-    .then(res => res.json())
-    .then(data => console.log(data))
+async  function ageStudents(age) {
+  const res = await fetch(`${BASE_URL}/students?age=${age}`)
+  const student =  await res.json()
+  const articles = await student.articles
+  return console.log(student);
 }
 
 ageStudents(19)
@@ -187,10 +194,11 @@ ageStudents(19)
 
 //GET /students?name=:name - повернути всіх студентів з вказаним ім'ям.
 
-function nameStudents(name) {
-  return fetch(`${BASE_URL}/students?name=${name}`)
-    .then(res => res.json())
-    .then(data => console.log(data))
+async function nameStudents(name) {
+  const res = await  fetch(`${BASE_URL}/students?name=${name}`)
+  const student =  await res.json()
+  const articles = await student.articles
+  return console.log(student);
 }
 
 nameStudents("Jason")
@@ -198,20 +206,22 @@ nameStudents("Jason")
 
 // GET /students?email=:email - повернути студента з вказаною електронною поштою.
 
-function emailStudents(email) {
-  return fetch(`${BASE_URL}/students?email=${email}`)
-    .then(res => res.json())
-    .then(data => console.log(data))
+async function emailStudents(email) {
+  const res = await fetch(`${BASE_URL}/students?email=${email}`)
+  const student =  await res.json()
+  const articles = await student.articles
+  return console.log(student);
 }
 
 emailStudents("john.doe@example.com")
 
 // GET /students?phone=:phone - повернути студента з вказаним номером телефону.
 
-function phoneStudents(phone) {
-  return fetch(`${BASE_URL}/students?phone=${phone}`)
-    .then(res => res.json())
-    .then(data => console.log(data))
+async  function phoneStudents(phone) {
+  const res = await fetch(`${BASE_URL}/students?phone=${phone}`)
+    const student =  await res.json()
+    const articles = await student.articles
+    return console.log(student);
 }
 
 phoneStudents("555-1234")
