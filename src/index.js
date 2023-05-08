@@ -1,4 +1,4 @@
-// const BASE_URL = 'http://localhost:3000'
+const BASE_URL = 'http://localhost:3000'
 
 
 // function getMovies (newMovie) {
@@ -62,15 +62,16 @@
 // GET /students?email=:email - повернути студента з вказаною електронною поштою.
 // GET /students?phone=:phone - повернути студента з вказаним номером телефону.
 
-const BASE_URL = 'http://localhost:3000'
+
 
  // GET /students - повернути всіх студентів.
 
- function getReturnStudens() {
-  fetch(`${BASE_URL}/students`)
-  .then(response => response.json())
-  .then(data=> console.log(data))
-
+ 
+ async function getReturnStudens() {
+ const res = await fetch(`${BASE_URL}/students`)
+ const student =  await res.json()
+ const articles = await student.articles
+ return student
  }
  getReturnStudens()
 
@@ -214,3 +215,43 @@ function phoneStudents(phone) {
 }
 
 phoneStudents("555-1234")
+
+
+
+async function getFruit(name) {
+  const fruits = {
+    strawberry: '🍓',
+    kiwi: '🥝 ',
+    apple: '🍎',
+  };  
+
+  return Promise.resolve(fruits[name])
+}
+
+// getFruit(' strawberry')
+// .then(console.log())
+
+async function makeSmoothie() {
+
+  
+ try{
+  const strawberry = await getFruit('strawberry') 
+  console.log(strawberry);
+
+  const kiwi =  await getFruit('kiwi')
+ console.log(kiwi);
+ 
+ } catch (error) {
+console.log('Помилка');
+ }
+ 
+ 
+  // getFruit('strawberry').then((res)=> {
+  //   console.log(res),
+  //   getFruit('kiwi').then(console.log)
+  // }
+   
+    
+
+}
+makeSmoothie()
